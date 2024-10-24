@@ -45,4 +45,30 @@ public class DataEntryFragment extends Fragment {
 
         return view;
     }
+
+    private boolean validateInput() {
+        if (TextUtils.isEmpty(editTextName.getText())) {
+            editTextName.setError("Name cannot be empty");
+            return false;
+        }
+        if (TextUtils.isEmpty(editTextAge.getText()) || !TextUtils.isDigitsOnly(editTextAge.getText())) {
+            editTextAge.setError("Invalid age");
+            return false;
+        }
+        int age = Integer.parseInt(editTextAge.getText().toString());
+        if (age < 0 || age > 120) {
+            editTextAge.setError("Invalid age");
+            return false;
+        }
+        if (TextUtils.isEmpty(editTextGrade.getText()) || !TextUtils.isDigitsOnly(editTextGrade.getText())) {
+            editTextGrade.setError("Invalid grade");
+            return false;
+        }
+        int grade = Integer.parseInt(editTextGrade.getText().toString());
+        if (grade < 0 || grade > 100) {
+            editTextGrade.setError("Grade must be between 0 and 100");
+            return false;
+        }
+        return true;
+    }
 }
