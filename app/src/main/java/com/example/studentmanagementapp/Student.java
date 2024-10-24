@@ -32,4 +32,5 @@ public class Student {
 
         return major;
     }
+
 }
