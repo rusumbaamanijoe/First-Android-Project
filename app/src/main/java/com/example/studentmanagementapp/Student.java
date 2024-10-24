@@ -13,24 +13,12 @@ public class Student {
         this.major = major;
     }
 
-    public String getName() {
+    public String getName() {return name;}
 
-        return name;
-    }
+    public int getAge() {return age;}
 
-    public int getAge() {
+    public int getGrade() {return grade;}
 
-        return age;
-    }
-
-    public int getGrade() {
-
-        return grade;
-    }
-
-    public String getMajor() {
-
-        return major;
-    }
+    public String getMajor() {return major;}
 
 }
