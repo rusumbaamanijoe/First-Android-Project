@@ -96,14 +96,16 @@
     <!-- Submit Button -->
     <Button
         android:id="@+id/buttonSubmit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:text="Submit"
         android:textColor="#FFFFFF"
         android:backgroundTint="#3F51B5"
-        android:paddingVertical="12dp"
-        android:textSize="16sp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="14sp"
         android:fontFamily="sans-serif-medium"
         android:elevation="2dp" />
+
 </LinearLayout>
