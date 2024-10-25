@@ -3,30 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F5F5F5">
 
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_student_data_available"
-        android:textSize="18sp" />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textViewAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textViewGrade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textViewMajor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
 </LinearLayout>
