@@ -33,7 +33,7 @@
             android:hint="Enter Name"
             android:inputType="textPersonName"
             android:padding="12dp"
-            android:backgroundTint="#3F51B5"
+            android:background="@null"
             android:textColor="#000000" />
     </androidx.cardview.widget.CardView>
 
@@ -52,7 +52,7 @@
             android:hint="Enter Age"
             android:inputType="number"
             android:padding="12dp"
-            android:backgroundTint="#3F51B5"
+            android:background="@null"
             android:textColor="#000000" />
     </androidx.cardview.widget.CardView>
 
@@ -71,7 +71,7 @@
             android:hint="Enter Grade"
             android:inputType="number"
             android:padding="12dp"
-            android:backgroundTint="#3F51B5"
+            android:background="@null"
             android:textColor="#000000" />
     </androidx.cardview.widget.CardView>
 
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter Major (Optional)"
             android:padding="12dp"
-            android:backgroundTint="#3F51B5"
+            android:background="@null"
             android:textColor="#000000" />
     </androidx.cardview.widget.CardView>
 
