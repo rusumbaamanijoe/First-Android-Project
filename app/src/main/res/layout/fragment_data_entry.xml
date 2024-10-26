@@ -5,19 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#F5F5F5">
+    android:background="@color/backgroundLight">
 
-    <!-- Title/Header -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registering"
         android:textSize="24sp"
-        android:textColor="#3F51B5"
+        android:textColor="@color/textAccent"
         android:layout_marginBottom="24dp"
         android:fontFamily="sans-serif-medium" />
 
-    <!-- Individual CardViews for each EditText -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +32,7 @@
             android:inputType="textPersonName"
             android:padding="12dp"
             android:background="@null"
-            android:textColor="#000000" />
+            android:textColor="@color/textPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -53,7 +51,7 @@
             android:inputType="number"
             android:padding="12dp"
             android:background="@null"
-            android:textColor="#000000" />
+            android:textColor="@color/textPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -72,7 +70,7 @@
             android:inputType="number"
             android:padding="12dp"
             android:background="@null"
-            android:textColor="#000000" />
+            android:textColor="@color/textPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -90,32 +88,30 @@
             android:hint="Enter Major (Optional)"
             android:padding="12dp"
             android:background="@null"
-            android:textColor="#000000" />
+            android:textColor="@color/textPrimary" />
     </androidx.cardview.widget.CardView>
 
-    <!-- Submit Button -->
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:text="Submit"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#3F51B5"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primaryColor"
         android:paddingVertical="8dp"
         android:paddingHorizontal="24dp"
         android:textSize="14sp"
         android:fontFamily="sans-serif-medium"
         android:elevation="2dp" />
 
-    <!-- Help Link -->
     <TextView
         android:id="@+id/textViewHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Help?"
-        android:textColor="#3F51B5"
+        android:textColor="@color/textAccent"
         android:textSize="14sp"
         android:fontFamily="sans-serif-medium"
         android:clickable="true"
