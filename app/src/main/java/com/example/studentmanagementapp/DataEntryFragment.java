@@ -50,7 +50,7 @@ public class DataEntryFragment extends Fragment {
 
             // Navigate to DisplayFragment after submitting data
             requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container_display, new DisplayFragment())
+                    .replace(R.id.fragment_container_display, new DisplayFragment()) // Ensure to replace the correct container ID
                     .addToBackStack(null)
                     .commit();
         }
@@ -77,6 +77,10 @@ public class DataEntryFragment extends Fragment {
         int grade = Integer.parseInt(editTextGrade.getText().toString());
         if (grade < 0 || grade > 100) {
             editTextGrade.setError("Grade must be between 0 and 100");
+            return false;
+        }
+        if (TextUtils.isEmpty(editTextMajor.getText())) {
+            editTextMajor.setError("Major cannot be empty");
             return false;
         }
         return true;
