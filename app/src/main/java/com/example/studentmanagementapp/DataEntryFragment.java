@@ -29,7 +29,7 @@ public class DataEntryFragment extends Fragment {
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
 
-        submitDataIfValid();
+        view.findViewById(R.id.buttonSubmit).setOnClickListener(v -> submitDataIfValid());
 
         return view;
     }
@@ -44,6 +44,7 @@ public class DataEntryFragment extends Fragment {
             studentViewModel.setStudent(new Student(name, age, grade, major));
             Toast.makeText(getActivity(), "Student data submitted", Toast.LENGTH_SHORT).show();
 
+            // Navigate to DisplayFragment after submitting data
             requireActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container_display, new DisplayFragment())
                     .addToBackStack(null)
