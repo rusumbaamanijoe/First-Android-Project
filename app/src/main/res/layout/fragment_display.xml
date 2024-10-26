@@ -5,7 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#F5F5F5">
+    android:background="@color/backgroundLight"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Details"
+        android:textSize="24sp"
+        android:textColor="@color/textAccent"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium" />
 
     <LinearLayout
         android:id="@+id/detailsLayout"
