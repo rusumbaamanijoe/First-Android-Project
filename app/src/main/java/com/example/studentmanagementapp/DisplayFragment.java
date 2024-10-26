@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 public class DisplayFragment extends Fragment {
     private TextView textViewName, textViewAge, textViewGrade, textViewMajor;
     private StudentViewModel studentViewModel;
-    private View detailsLayout;
+    private View detailsLayout; // Hold a reference to the details layout
 
     @Nullable
     @Override
@@ -26,9 +26,13 @@ public class DisplayFragment extends Fragment {
         textViewAge = view.findViewById(R.id.textViewAge);
         textViewGrade = view.findViewById(R.id.textViewGrade);
         textViewMajor = view.findViewById(R.id.textViewMajor);
+        detailsLayout = view.findViewById(R.id.detailsLayout); // Reference to the details layout
 
-        detailsLayout = view.findViewById(R.id.details_layout);
-        detailsLayout.setVisibility(View.GONE);
+        Button submitButton = view.findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(v -> {
+            detailsLayout.setVisibility(View.VISIBLE); // Show the details layout on button click
+            updateDetails(); // Call a method to update the details
+        });
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
         studentViewModel.getStudent().observe(getViewLifecycleOwner(), student -> {
@@ -40,11 +44,10 @@ public class DisplayFragment extends Fragment {
             }
         });
 
-        Button submitButton = view.findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(v -> {
-            detailsLayout.setVisibility(View.VISIBLE);
-        });
-
         return view;
+    }
+
+    private void updateDetails() {
+
     }
 }

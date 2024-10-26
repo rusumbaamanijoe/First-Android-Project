@@ -7,129 +7,143 @@
     android:padding="16dp"
     android:background="#F5F5F5">
 
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <LinearLayout
+        android:id="@+id/detailsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="16dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="8dp">
+        android:visibility="gone"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center">
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_name_icon"
-                android:contentDescription="Name Icon"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/textViewName"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no_student_data_available"
-                android:textStyle="bold"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="16dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_name_icon"
+                    android:contentDescription="Name Icon"
+                    android:layout_marginEnd="8dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_student_data_available"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center">
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_age_icon"
-                android:contentDescription="Age Icon"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/textViewAge"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="16dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_age_icon"
+                    android:contentDescription="Age Icon"
+                    android:layout_marginEnd="8dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center">
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_grade_icon"
-                android:contentDescription="Grade Icon"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/textViewGrade"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="16dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_grade_icon"
+                    android:contentDescription="Grade Icon"
+                    android:layout_marginEnd="8dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center">
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_major_icon"
-                android:contentDescription="Major Icon"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/textViewMajor"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center">
 
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_major_icon"
+                    android:contentDescription="Major Icon"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/textViewMajor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 </LinearLayout>
