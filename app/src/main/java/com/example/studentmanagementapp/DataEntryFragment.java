@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,14 +23,17 @@ public class DataEntryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_data_entry, container, false);
 
-        editTextName = view.findViewById(R.id.textViewName);
-        editTextAge = view.findViewById(R.id.textViewAge);
-        editTextGrade = view.findViewById(R.id.textViewGrade);
-        editTextMajor = view.findViewById(R.id.textViewMajor);
+        // Initialize EditText fields with correct IDs
+        editTextName = view.findViewById(R.id.editTextName);
+        editTextAge = view.findViewById(R.id.editTextAge);
+        editTextGrade = view.findViewById(R.id.editTextGrade);
+        editTextMajor = view.findViewById(R.id.editTextMajor);
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
 
-        view.findViewById(R.id.buttonSubmit).setOnClickListener(v -> submitDataIfValid());
+        // Set up the submit button click listener
+        Button submitButton = view.findViewById(R.id.buttonSubmit);
+        submitButton.setOnClickListener(v -> submitDataIfValid());
 
         return view;
     }
