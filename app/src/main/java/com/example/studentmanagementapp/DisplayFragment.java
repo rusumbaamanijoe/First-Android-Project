@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,12 @@ public class DisplayFragment extends Fragment {
         textViewMajor = view.findViewById(R.id.textViewMajor);
         detailsLayout = view.findViewById(R.id.detailsLayout);
 
+        Button submitButton = view.findViewById(R.id.buttonSubmit);
+        submitButton.setOnClickListener(v -> {
+            detailsLayout.setVisibility(View.VISIBLE);
+            updateDetails();
+        });
+
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
         studentViewModel.getStudent().observe(getViewLifecycleOwner(), student -> {
             if (student != null) {
@@ -38,5 +45,8 @@ public class DisplayFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void updateDetails() {
     }
 }

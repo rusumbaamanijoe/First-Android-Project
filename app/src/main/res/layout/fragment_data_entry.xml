@@ -90,32 +90,4 @@
             android:background="@null"
             android:textColor="@color/textPrimary" />
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:text="Submit"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/primaryColor"
-        android:paddingVertical="8dp"
-        android:paddingHorizontal="24dp"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif-medium"
-        android:elevation="2dp" />
-
-    <TextView
-        android:id="@+id/textViewHelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Help?"
-        android:textColor="@color/textAccent"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif-medium"
-        android:clickable="true"
-        android:focusable="true"
-        android:paddingVertical="8dp"
-        android:paddingHorizontal="16dp" />
 </LinearLayout>

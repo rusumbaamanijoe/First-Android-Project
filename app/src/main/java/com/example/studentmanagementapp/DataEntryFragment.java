@@ -38,12 +38,14 @@ public class DataEntryFragment extends Fragment {
                 int grade = Integer.parseInt(editTextGrade.getText().toString());
                 String major = editTextMajor.getText().toString();
 
+                // Set the student in the ViewModel
                 studentViewModel.setStudent(new Student(name, age, grade, major));
                 Toast.makeText(getActivity(), "Student data submitted", Toast.LENGTH_SHORT).show();
 
+                // Navigate to DisplayFragment
                 requireActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container_display, new DisplayFragment()) // Update to the correct ID for the fragment container
-                        .addToBackStack(null)
+                        .replace(R.id.fragment_container_display, new DisplayFragment()) // Replace with your actual container ID
+                        .addToBackStack(null) // Optional: adds the transaction to the back stack
                         .commit();
             }
         });
