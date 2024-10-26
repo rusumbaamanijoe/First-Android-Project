@@ -21,10 +21,10 @@ public class DisplayFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_display, container, false);
 
-        textViewName = view.findViewById(R.id.textViewName);
-        textViewAge = view.findViewById(R.id.textViewAge);
-        textViewGrade = view.findViewById(R.id.textViewGrade);
-        textViewMajor = view.findViewById(R.id.textViewMajor);
+        textViewName = view.findViewById(R.id.editTextName);
+        textViewAge = view.findViewById(R.id.editTextAge);
+        textViewGrade = view.findViewById(R.id.editTextGrade);
+        textViewMajor = view.findViewById(R.id.editTextMajor);
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
 

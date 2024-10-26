@@ -22,10 +22,10 @@ public class DataEntryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_data_entry, container, false);
 
-        editTextName = view.findViewById(R.id.editTextName);
-        editTextAge = view.findViewById(R.id.editTextAge);
-        editTextGrade = view.findViewById(R.id.editTextGrade);
-        editTextMajor = view.findViewById(R.id.editTextMajor);
+        editTextName = view.findViewById(R.id.textViewName);
+        editTextAge = view.findViewById(R.id.textViewAge);
+        editTextGrade = view.findViewById(R.id.textViewGrade);
+        editTextMajor = view.findViewById(R.id.textViewMajor);
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
 
