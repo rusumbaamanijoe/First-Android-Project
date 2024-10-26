@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/no_student_data_available"
             android:textStyle="bold"
+            android:layout_gravity="center"
             android:src="@drawable/ic_name_icon"
             android:textSize="18sp" />
     </LinearLayout>
