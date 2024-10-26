@@ -1,98 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundLight">
 
-    <LinearLayout
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registering"
+    android:textSize="24sp"
+    android:textColor="@color/textAccent"
+    android:layout_marginBottom="24dp"
+    android:fontFamily="sans-serif-medium" />
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp">
+
+    <EditText
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@null"
+        android:textColor="@color/textPrimary" />
+</androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registering"
-            android:textSize="24sp"
-            android:textColor="@color/textAccent"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="sans-serif-medium" />
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="4dp">
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Age"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@null"
+        android:textColor="@color/textPrimary" />
+</androidx.cardview.widget.CardView>
 
-            <EditText
-                android:id="@+id/editTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Name"
-                android:inputType="textPersonName"
-                android:padding="12dp"
-                android:background="@null"
-                android:textColor="@color/textPrimary" />
-        </androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="4dp">
+    <EditText
+        android:id="@+id/editTextGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Grade"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@null"
+        android:textColor="@color/textPrimary" />
+</androidx.cardview.widget.CardView>
 
-            <EditText
-                android:id="@+id/editTextAge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Age"
-                android:inputType="number"
-                android:padding="12dp"
-                android:background="@null"
-                android:textColor="@color/textPrimary" />
-        </androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginBottom="24dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="4dp">
+    <EditText
+        android:id="@+id/editTextMajor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Major (Optional)"
+        android:padding="12dp"
+        android:background="@null"
+        android:textColor="@color/textPrimary" />
+</androidx.cardview.widget.CardView>
 
-            <EditText
-                android:id="@+id/editTextGrade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Grade"
-                android:inputType="number"
-                android:padding="12dp"
-                android:background="@null"
-                android:textColor="@color/textPrimary" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="4dp">
-
-            <EditText
-                android:id="@+id/editTextMajor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Major (Optional)"
-                android:padding="12dp"
-                android:background="@null"
-                android:textColor="@color/textPrimary" />
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
+    </ScrollView>
