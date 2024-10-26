@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,30 +26,29 @@ public class DataEntryFragment extends Fragment {
         editTextAge = view.findViewById(R.id.editTextAge);
         editTextGrade = view.findViewById(R.id.editTextGrade);
         editTextMajor = view.findViewById(R.id.editTextMajor);
-        Button buttonSubmit = view.findViewById(R.id.buttonSubmit);
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
 
-        buttonSubmit.setOnClickListener(v -> {
-            if (validateInput()) {
-                String name = editTextName.getText().toString();
-                int age = Integer.parseInt(editTextAge.getText().toString());
-                int grade = Integer.parseInt(editTextGrade.getText().toString());
-                String major = editTextMajor.getText().toString();
-
-                // Set the student in the ViewModel
-                studentViewModel.setStudent(new Student(name, age, grade, major));
-                Toast.makeText(getActivity(), "Student data submitted", Toast.LENGTH_SHORT).show();
-
-                // Navigate to DisplayFragment
-                requireActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container_display, new DisplayFragment()) // Replace with your actual container ID
-                        .addToBackStack(null) // Optional: adds the transaction to the back stack
-                        .commit();
-            }
-        });
+        submitDataIfValid();
 
         return view;
+    }
+
+    private void submitDataIfValid() {
+        if (validateInput()) {
+            String name = editTextName.getText().toString();
+            int age = Integer.parseInt(editTextAge.getText().toString());
+            int grade = Integer.parseInt(editTextGrade.getText().toString());
+            String major = editTextMajor.getText().toString();
+
+            studentViewModel.setStudent(new Student(name, age, grade, major));
+            Toast.makeText(getActivity(), "Student data submitted", Toast.LENGTH_SHORT).show();
+
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container_display, new DisplayFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
     }
 
     private boolean validateInput() {
