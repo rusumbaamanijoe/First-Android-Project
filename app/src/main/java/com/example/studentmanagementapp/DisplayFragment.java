@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider;
 public class DisplayFragment extends Fragment {
     private TextView textViewName, textViewAge, textViewGrade, textViewMajor;
     private StudentViewModel studentViewModel;
-    private View detailsLayout;
 
     @Nullable
     @Override
@@ -26,15 +25,10 @@ public class DisplayFragment extends Fragment {
         textViewAge = view.findViewById(R.id.textViewAge);
         textViewGrade = view.findViewById(R.id.textViewGrade);
         textViewMajor = view.findViewById(R.id.textViewMajor);
-        detailsLayout = view.findViewById(R.id.detailsLayout);
-
-        Button submitButton = view.findViewById(R.id.buttonSubmit);
-        submitButton.setOnClickListener(v -> {
-            detailsLayout.setVisibility(View.VISIBLE);
-            updateDetails();
-        });
 
         studentViewModel = new ViewModelProvider(requireActivity()).get(StudentViewModel.class);
+
+        // Observe the LiveData from the ViewModel
         studentViewModel.getStudent().observe(getViewLifecycleOwner(), student -> {
             if (student != null) {
                 textViewName.setText("Name: " + student.getName());
@@ -45,8 +39,5 @@ public class DisplayFragment extends Fragment {
         });
 
         return view;
-    }
-
-    private void updateDetails() {
     }
 }
