@@ -15,6 +15,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:src="@drawable/ic_name_icon"
             android:contentDescription="Name Icon"
             android:layout_marginEnd="8dp" />
 
@@ -24,8 +25,6 @@
             android:layout_height="wrap_content"
             android:text="@string/no_student_data_available"
             android:textStyle="bold"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_name_icon"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -38,6 +37,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:src="@drawable/ic_age_icon"
             android:contentDescription="Age Icon"
             android:layout_marginEnd="8dp" />
 
@@ -46,7 +46,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:src="@drawable/ic_age_icon"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -59,6 +58,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:src="@drawable/ic_grade_icon"
             android:contentDescription="Grade Icon"
             android:layout_marginEnd="8dp" />
 
@@ -67,7 +67,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:src="@drawable/ic_grade_icon"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -80,6 +79,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:src="@drawable/ic_major_icon"
             android:contentDescription="Major Icon"
             android:layout_marginEnd="8dp" />
 
@@ -88,7 +88,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:src="@drawable/ic_major_icon"
             android:textStyle="bold" />
     </LinearLayout>
 
