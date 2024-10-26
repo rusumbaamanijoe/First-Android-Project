@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModel;
 public class StudentViewModel extends ViewModel {
     private final MutableLiveData<Student> student = new MutableLiveData<>();
 
-    public void setStudent(Student newStudent) {
-        student.setValue(newStudent);
+    public void setStudent(Student studentData) {
+        student.setValue(studentData);
     }
 
     public LiveData<Student> getStudent() {
